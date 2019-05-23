@@ -53,11 +53,27 @@ def ask_questions():
             # We append the text to the answers list
             answers.append(text)
     
-    # The zip() function puts the questions and answers together
-    for question, answer in zip(questions, answers):
+    #Functionality to verify answers and keep score
+    #Check length of list
+    number_of_questions = len(questions)
+    # The zip() function puts the questions and answers together. Doing it here ensures we don't need to run it each time our loop runs
+    questions_and_answers = zip(questions, answers)
+    
+    score = 0
+    
+    
+    for question, answer in questions_and_answers:
         # We zip the question and answers together, and we add in our guess here
         guess = input(question + "> ")
+        if guess == answer:
+            score += 1
+            print("Correct!")
+            print(score)
+        else:
+            print("Wrong!")
     
+    print("You got {0} correct out of {1}".format(score, number_of_questions))
+
 '''
 Function to allow user to add a question and answer
 The input will then be appended to the questions.txt file

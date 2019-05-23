@@ -1,2 +1,4 @@
 What is the capital of England?
 London
+What is the capital of France?
+Paris
