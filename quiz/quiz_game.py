@@ -116,3 +116,11 @@ def game_loop():
         print("")
 
 game_loop()
+
+'''
+Think of ways to improve the game:
+Random question choice
+Ability to delete question
+Capitalize user question and answer when adding question and answer
+Capitalize user answer when answering question
+'''
